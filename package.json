@@ -1,0 +1,20 @@
+{
+  "name": "spin-ts-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./script.js && npx webpack --mode=production && mkdir -p target && spin js2wasm -o target/spin-ts-demo.wasm dist/spin.js && spin deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fermyon/spin-sdk": "^0.4.1",
+    "ts-loader": "^9.4.3",
+    "typescript": "^4.9.5",
+    "webpack": "^5.84.1",
+    "webpack-cli": "^4.10.0"
+  }
+}

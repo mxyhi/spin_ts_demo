@@ -1,0 +1,17 @@
+spin_manifest_version = "1"
+authors = ["mxyhi <2528988582@qq.com>"]
+description = ""
+name = "spin_ts_demo"
+trigger = { type = "http", base = "/api" }
+version = "0.1.0"
+
+[[component]]
+id = "spin-ts-demo"
+source = "target/spin-ts-demo.wasm"
+exclude_files = ["**/node_modules", "./script.js"]
+key_value_stores = ["default"]
+[component.trigger]
+route = "/v1/..."
+[component.build]
+watch = ["src/**/*.ts", "Cargo.toml"]
+command = "npm run build"
