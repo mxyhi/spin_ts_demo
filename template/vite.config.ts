@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [suidPlugin(), solidPlugin()],
   build: {
     target: 'esnext',
-    outDir: '../public',
+    outDir: '../docs',
   },
 });
